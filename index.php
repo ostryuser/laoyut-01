@@ -62,6 +62,7 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -240,38 +241,40 @@
           </section>
 
         </main>
-    </div>
+</div>
+
+
 
     <footer>
-        <div class="contact-form">
-            <div class="container">
+        <div class="contact-form-container">
+            <div class="contact-form">
+            <h2>Kontakt</h2>
                 <?php if($msg != ''): ?>
                     <div class="alert <?php echo $msgClass; ?>"><?php 
                     echo $msg; ?></div>
                 <?php endif; ?>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control" 
-                    value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+                <div class="txtb">
+                    <label></label>
+                    <input type="text" name="name" class="input-cap"
+                    value="<?php echo isset($_POST['name']) ? $name : ''; ?>" placeholder="IMIĘ">
                 </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" name="email" class="form-control" 
-                    value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+                <div class="txtb">
+                    <label></label>
+                    <input type="text" name="email" class="input-low"
+                    value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="EMAIL">
                 </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea name="message" class="form-control"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+                <div class="txtb">
+                    <label></label>
+                    <textarea name="message" placeholder="WIADOMOŚĆ"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
                 </div>
                 <br>
-                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="submit" class="form-btn">Wyślij</button>
             </form>
         </div>
         </div>
         <div class="google-map"></div>
     </footer>
-
 
 
         

@@ -5,11 +5,19 @@
     
 }
 
+
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
     overflow-x: hidden;
+    background-color: white !important;
 }
+
+html {
+    background-color: white !important;
+
+}
+
 
 /* SCROLL INDICATOR */
 
@@ -82,6 +90,8 @@ nav a:focus {
     background-position: center;
     background-blend-mode: overlay;
     color: white;
+    position: relative;
+    z-index: 20;
 }
 
 #banner h3 {
@@ -96,6 +106,7 @@ nav a:focus {
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
+    background-color: white !important;
 }
 
 /* icon box */
@@ -290,7 +301,7 @@ nav a:focus {
 
 .slider-wrapper {
   width: 100%;
-  height: 250px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -352,6 +363,7 @@ nav a:focus {
     align-items: center;
     border: 1px solid black;
     font-family: Oswald, sans-serif;
+    margin-bottom: 500px;
 }
 
 .career-right {
@@ -396,4 +408,110 @@ nav a:focus {
 
 .career-side span {
     font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    background-color: #2d2d2d;
+    color: #999;
+    height: 500px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
+}
+
+/* contact form */
+
+.contact-form-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.contact-form {
+    width: 85%;
+    max-width: 600px;
+    background: #444442;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.contact-form h2 {
+    color: white;
+}
+
+.txtb {
+    border: 3px solid #444442;
+    margin: 8px 0;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #2d2d2d;
+    padding-left: 8px;
+    padding-top: 6px;
+}
+
+.txtb label {
+    display: block;
+    text-align: left;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.txtb input,
+.txtb textarea {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: lightgray;
+    margin-top: 6px;
+    font-size: .8rem;
+    color: lightgray;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+.txtb input:focus,
+.txtb textarea:focus {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+.form-btn {
+    display: inline-block;
+    background: transparent;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 17%;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+textarea {
+    resize: none;
+}
+
+.input-cap {
+    text-transform: capitalize;
+}
+
+
+.google-map {
+    width: 50%;
+   
 }

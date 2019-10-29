@@ -130,3 +130,24 @@ function myFunction() {
 }
 
 })
+
+// SHOWING INPUT ON TYPE
+
+$('input,textarea').on('input', function(){
+  if(($(this).length && $(this).val().length)){
+  $(this).css({'opacity': '1'});
+  $('.input-low').css("text-transform", 'lowercase');
+} else {
+  $('.input-low').css("text-transform", 'uppercase');
+    if(!($(this).length && $(this).val().length)){
+    $(this).on('focus', function(){
+      $(this).css('opacity', '0');
+    });
+  }
+    $(this).on('focusout', function(){
+      $(this).css('opacity', '1');
+    });
+  }
+});
+
+
