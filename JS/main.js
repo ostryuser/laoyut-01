@@ -57,7 +57,7 @@ $(function() {
 
 
 
-  const slider = document.querySelector('.slider-wrapper');
+  const slider = document.querySelector('.slider-wrapper');  // draggable function
   let isDown = false;
   let startX;
   let scrollLeft;
